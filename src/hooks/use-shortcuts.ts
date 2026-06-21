@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import { audioContext } from '@/lib/audio';
 
 type ShortcutMap = {
   [key: string]: () => void;
@@ -19,7 +18,6 @@ export function useShortcuts(shortcuts: ShortcutMap) {
       const key = e.key.toLowerCase();
       if (shortcuts[key]) {
         e.preventDefault();
-        audioContext.playClick();
         shortcuts[key]();
       }
     };
