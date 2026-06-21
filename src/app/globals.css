@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 280 15% 10%;
+    --foreground: 280 10% 98%;
+    --card: 280 15% 12%;
+    --card-foreground: 280 10% 98%;
+    --popover: 280 15% 12%;
+    --popover-foreground: 280 10% 98%;
+    --primary: 271 100% 71%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 238 100% 75%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 280 15% 20%;
+    --muted-foreground: 280 10% 70%;
+    --accent: 238 100% 75%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 280 15% 20%;
+    --input: 280 15% 20%;
+    --ring: 271 100% 71%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+    background-image: 
+      radial-gradient(at 0% 0%, hsla(271, 100%, 71%, 0.1) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, hsla(238, 100%, 75%, 0.1) 0px, transparent 50%);
+    background-attachment: fixed;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline tracking-tight;
+  }
+}
+
+.neon-border {
+  box-shadow: 0 0 10px hsla(271, 100%, 71%, 0.3);
+}
+
+.neon-text {
+  text-shadow: 0 0 10px hsla(271, 100%, 71%, 0.5);
+}
+
+.flicker {
+  animation: flicker 2s infinite;
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    opacity: 0.5;
+  }
+}
+
+.liquid-transition {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+

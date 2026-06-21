@@ -1,0 +1,40 @@
+{
+  "collections": [
+    {
+      "name": "leaderboard",
+      "model": {
+        "userId": {
+          "type": "string",
+          "required": true
+        },
+        "username": {
+          "type": "string",
+          "required": true
+        },
+        "classTitle": {
+          "type": "string",
+          "required": true
+        },
+        "level": {
+          "type": "number",
+          "required": true
+        },
+        "xp": {
+          "type": "number",
+          "required": true
+        },
+        "updatedAt": {
+          "type": "timestamp",
+          "required": true
+        }
+      },
+      "indexes": [
+        {
+          "fields": [
+            { "fieldPath": "xp", "order": "DESCENDING" }
+          ]
+        }
+      ]
+    }
+  ]
+}

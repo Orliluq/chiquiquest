@@ -1,0 +1,6 @@
+{
+  "name": "ChiquiQuest AI",
+  "description": "An AI-powered career RPG engine that transforms your professional goals into game quests, skill trees, and achievements.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_API"]
+}
